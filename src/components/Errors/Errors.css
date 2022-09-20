@@ -1,0 +1,82 @@
+.errorsContainer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px 10px 10px 0;
+    width: min(450px, 100%);
+    max-height: 100vh;
+    overflow-y: auto;
+    z-index: 9999;
+}
+
+.errorsBlock {
+    position: relative;
+    border: 1px solid #D50000;
+    background: #FFEAEA;
+    color: #333;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    font-size: 13px;
+    padding: 8px 16px;
+    word-break: break-word;
+}
+
+.errorsBlockHide {
+    height: 35px !important;
+    margin-top: 0 !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.errorsCloseButton {
+    position: absolute;
+    cursor: pointer;
+    right: 8px;
+    top: 8px;
+    width: 15px;
+    height: 15px;
+    opacity: 0;
+}
+
+.errorsCloseButton:before, .errorsCloseButton:after {
+    position: absolute;
+    left: 7px;
+    top: -1px;
+    content: ' ';
+    height: 17px;
+    width: 2px;
+    background-color: #333;
+}
+
+.errorsCloseButton:before {
+    transform: rotate(45deg);
+}
+
+.errorsCloseButton:after {
+    transform: rotate(-45deg);
+}
+
+.errorsBlock:hover .errorsCloseButton {
+    opacity: 1;
+}
+
+.errorsTitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.errorsURL {
+    margin-top: 3px;
+    color: #002C92;
+}
+
+.errorsMessage {
+    margin-top: 3px;
+}
