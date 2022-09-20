@@ -18,7 +18,7 @@ const App$ = (props) => {
     ctx.canvas.height = height;
     ctx.canvas.width  = width;
 
-    ctx.fillStyle = "#ffffff";
+    ctx.fillStyle = "#fdfdfd";
     ctx.fillRect(0, 0, width, height);
 
   }
